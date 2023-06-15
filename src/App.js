@@ -1,36 +1,37 @@
-import { useState } from "react";
-
+// User Defined Tag: <App />
 function App() {
   return (
     <>
-      <h1>String Exampl</h1>
-      <StringDemo />
+      <AppHeader />
+      <AppBody />
+      <AppFooter />
     </>
   );
 }
 
-function StringDemo() {
-  let [title, setTitle] = useState("Hello World");
-
-  let lowerCaseAction = () => {
-    title = title.toLowerCase();
-    console.log(title);
-
-    setTitle(title);
-  };
-
-  let upperCaseAction = () => {
-    title = title.toUpperCase();
-    console.log(title);
-
-    setTitle(title);
-  };
-
+// User Defined Tag: <AppHeader />
+function AppHeader() {
   return (
     <>
-      <h1>{title}</h1>
-      <input type="button" value="Lower Case" onClick={lowerCaseAction} />
-      <input type="button" value="Upper Case" onClick={upperCaseAction} />
+      <h1>Header</h1>
+    </>
+  );
+}
+
+// User Defined Tag: <AppBody />
+function AppBody() {
+  return (
+    <>
+      <h1>App Body</h1>
+    </>
+  );
+}
+
+// User Defined Tag: <AppFooter />
+function AppFooter() {
+  return (
+    <>
+      <h1>App Footer</h1>
     </>
   );
 }
